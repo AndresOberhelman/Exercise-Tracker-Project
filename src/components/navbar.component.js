@@ -6,7 +6,7 @@ export default class Navbar extends Component { //how components start
   render() { // all components must render something
     return ( // bootstrap navbar converted to work for app
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <Link to="/" className="navbar-brand">ExcerTracker</Link>
+        <Link to="/" className="navbar-brand">Exercise-Tracker</Link>
         <div className="collpase navbar-collapse">
         <ul className="navbar-nav mr-auto">
           <li className="navbar-item">
