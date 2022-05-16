@@ -37,33 +37,33 @@ export default class CreateExercise extends Component {
       })
 
   }
-
-  onChangeUsername(e) {
+  // uses the set state property to set the value of username to the target value. Updates user element in state
+  onChangeUsername(e) {  
     this.setState({
       username: e.target.value
     })
   }
-
+// updates description to state
   onChangeDescription(e) {
     this.setState({
       description: e.target.value
     })
   }
-
+  // updates duration in state
   onChangeDuration(e) {
     this.setState({
       duration: e.target.value
     })
   }
-
+  // passes in date from calender library to update state
   onChangeDate(date) {
     this.setState({
       date: date
     })
   }
-
+ 
   onSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); // prevents default html submit behavior to do below
 
     const exercise = {
       username: this.state.username,
@@ -77,7 +77,7 @@ export default class CreateExercise extends Component {
     axios.post('http://localhost:5000/exercises/add', exercise)
       .then(res => console.log(res.data));
 
-    window.location = '/';
+    window.location = '/'; // on post request send to home screen
   }
 
   render() {
