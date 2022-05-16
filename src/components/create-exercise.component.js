@@ -13,7 +13,7 @@ export default class CreateExercise extends Component {
     this.onChangeDate = this.onChangeDate.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
-    this.state = {
+    this.state = { //sets initial state of the component for the exercise
       username: '',
       description: '',
       duration: 0,
