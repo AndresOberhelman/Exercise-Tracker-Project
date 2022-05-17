@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-
+const path =require('path');
 require('dotenv').config(); // have environment variables
 
 const app = express(); //express server
@@ -30,3 +30,10 @@ app.use('/users',usersRouter); //loads everything on user route
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`); //start the server
 });
+
+app.use(express.static(path.join(__dirname, '../src/build')))
+
+// AFTER defining routes: Anything that doesn't match what's above, send back index.html; (the beginning slash ('/') in the string is important!)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/../src/build/index.html'))
+})
