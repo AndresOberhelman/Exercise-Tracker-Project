@@ -25,8 +25,7 @@
     "eject": "react-scripts eject",
     "src": "cd src && npm start",
     "backend": "cd backend && nodemon server",
-    "dev": "concurrently --kill-others-on-fail \"npm run backend\" \"npm run src\"",
-    "heroku-postbuild": "cd src && npm install && npm run build"
+    "dev": "concurrently --kill-others-on-fail \"npm run backend\" \"npm run src\""
   },
   "eslintConfig": {
     "extends": [
