@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-
+const url = `${process.env.API_URL}`
 export default class CreateExercise extends Component {
   constructor(props) {
     super(props);
